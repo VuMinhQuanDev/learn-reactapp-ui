@@ -6,12 +6,12 @@ import MyComponent from './components/MyComponent';
 import React from 'react';
 
 class App extends React.Component {
-  render(){
-    return(
+  render() {
+    return (
       <div>
-      <h1>Vũ Minh Quân</h1>
-      <MyComponent></MyComponent>
-    </div>
+        <h1>Vũ Minh Quân</h1>
+        <MyComponent></MyComponent>
+      </div>
     )
   }
 }

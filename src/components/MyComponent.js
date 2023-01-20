@@ -1,16 +1,12 @@
 import React from "react";
+import UserInfor from "./UserInfor";
 
 class MyComponent extends React.Component {
-    //JSX
-    state = {
-        name: 'Phùng Quỳnh Hương',
-        address: 'Bắc Giang',
-        age: 20
-    }
+
     render() {
         return (
             <div>
-                My name is {this.state.name} and i'm from {this.state.address}
+                <UserInfor />
             </div>
         );
     }
