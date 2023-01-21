@@ -1,13 +1,13 @@
 import React from "react";
 class DisplayInfor extends React.Component {
-    state={
+    state = {
         isShowListUser: true
     }
     handleShowHide = () => {
         this.setState({
-            isShowListUser:!this.state.isShowListUser 
+            isShowListUser: !this.state.isShowListUser
         })
-//! = toggle
+        //! = toggle
     }
     render() {
         //Destructuring array/object
@@ -17,10 +17,12 @@ class DisplayInfor extends React.Component {
             <div>
                 <div>
                     <span onClick={() => { this.handleShowHide() }} > {
-                      this.state.isShowListUser   === true?'Hide list user:' : "Show list user"
+                        this.state.isShowListUser === true ? 'Hide list user:' : "Show list user"
                     }</span>
                 </div>
-                {this.state.isShowListUser &&
+                {
+                    this.state.isShowListUser &&
+                    //Sau && sẽ truyền vào 1 khối HTML
                     <div>
                         {listUsers.map((user) => {
                             return (
