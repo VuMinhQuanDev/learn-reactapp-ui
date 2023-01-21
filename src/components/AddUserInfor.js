@@ -4,7 +4,7 @@ class AddUserInfor extends React.Component {
     state = {
         name: '',
         address: '',
-        age:''
+        age: ''
     }
     //JSX
     // handleClick = (event) => {
@@ -39,14 +39,14 @@ class AddUserInfor extends React.Component {
         event.preventDefault();
         // console.log(this.state);
         this.props.handleAddNewUser({
-            id:Math.floor((Math.random()*100)+1)+'-random',
-            name:this.state.name,
-            age:this.state.age
+            id: Math.floor((Math.random() * 100) + 1) + '-random',
+            name: this.state.name,
+            age: this.state.age
         })
     }
     render() {
         return (
-            <div>My name is {this.state.name} and i'm from {this.state.address} and now {this.state.age} years old
+            <>My name is {this.state.name} and i'm from {this.state.address} and now {this.state.age} years old
                 {/* <button onMouseOver={this.handleOnMouseOver} >Hover me</button> */}
                 {/* <button onClick={this.handleClick} >Click me</button> */}
                 <label>Your name: </label>
@@ -66,7 +66,7 @@ class AddUserInfor extends React.Component {
                     />
                     <button>Submit</button>
                 </form>
-            </div>
+            </>
         )
     }
 

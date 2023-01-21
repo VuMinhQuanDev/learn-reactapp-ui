@@ -1,4 +1,6 @@
 import React from "react";
+import '../assets/scss/DisplayInfor.scss'
+import logo from '../assets/img/hp.jpg'
 class DisplayInfor extends React.Component {
     state = {
         isShowListUser: true
@@ -14,7 +16,8 @@ class DisplayInfor extends React.Component {
         const { listUsers } = this.props;
         //props = properties
         return (
-            <div>
+            <div className="display-infor_container" >
+                <img className="img-container" src={logo} alt="" />
                 <div>
                     <span onClick={() => { this.handleShowHide() }} > {
                         this.state.isShowListUser === true ? 'Hide list user:' : "Show list user"
@@ -23,7 +26,7 @@ class DisplayInfor extends React.Component {
                 {
                     this.state.isShowListUser &&
                     //Sau && sẽ truyền vào 1 khối HTML
-                    <div>
+                    <>
                         {listUsers.map((user) => {
                             return (
                                 <div key={user.id} className={user.age > 18 ? "green" : "red"}>
@@ -33,7 +36,7 @@ class DisplayInfor extends React.Component {
                                 </div >
                             )
                         })}
-                    </div >
+                    </>
                 }
             </div>
         )
