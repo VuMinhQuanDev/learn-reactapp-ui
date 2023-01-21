@@ -1,6 +1,7 @@
 import React from "react";
 import '../assets/scss/DisplayInfor.scss'
-import logo from '../assets/img/hp.jpg'
+// import logo from '../assets/img/hp.jpg'
+
 class DisplayInfor extends React.Component {
     state = {
         isShowListUser: true
@@ -17,7 +18,7 @@ class DisplayInfor extends React.Component {
         //props = properties
         return (
             <div className="display-infor_container" >
-                <img className="img-container" src={logo} alt="" />
+                {/* <img className="img-container" src={logo} alt="" /> */}
                 <>
                     <span onClick={() => { this.handleShowHide() }} > {
                         this.state.isShowListUser === true ? 'Hide list user:' : "Show list user"
@@ -35,7 +36,7 @@ class DisplayInfor extends React.Component {
                                         <div>My age's {user.age}</div>
                                     </div>
                                     <div>
-                                        <button onClick={()=> this.props.handleDeleteUser(user.id)} >Delete</button>
+                                        <button onClick={() => this.props.handleDeleteUser(user.id)} >Delete</button>
                                     </div>
                                     <hr />
                                 </div>

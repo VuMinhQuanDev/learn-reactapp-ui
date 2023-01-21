@@ -9,10 +9,8 @@ class MyComponent extends React.Component {
             { id: 1, name: 'Huong Phung', age: 16 },
             { id: 2, name: 'Quan Vu', age: 22 },
             { id: 3, name: 'Huong Can', age: 23 },
-
         ]
     }
-
     handleAddNewUser = (userObj) => {
         this.setState({
             listUsers: [userObj, ...this.state.listUsers]
@@ -20,7 +18,7 @@ class MyComponent extends React.Component {
     }
     handleDeleteUser = (userId) => {
         let listUsersClone = [...this.state.listUsers];
-        listUsersClone = listUsersClone.filter(item=>item.id !==userId);
+        listUsersClone = listUsersClone.filter(item => item.id !== userId);
         this.setState({
             listUsers: listUsersClone
         })
@@ -40,4 +38,5 @@ class MyComponent extends React.Component {
         );
     }
 }
+
 export default MyComponent;
