@@ -6,9 +6,10 @@ class MyComponent extends React.Component {
     //DRY: don't repeat yourself
     state = {
         listUsers: [
-            {id:1, name:'Huong Phung', age:30},
-            {id:2, name:'Minh Quan', age:30},
-            {id:3, name:'Quan Huong', age:30},
+            {id:1, name:'Huong Phung', age:16},
+            {id:2, name:'Quan Vu', age:22},
+            {id:3, name:'Huong Can', age:23},
+            
         ]
     }
     render() {
