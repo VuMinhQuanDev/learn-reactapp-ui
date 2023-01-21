@@ -7,8 +7,10 @@ import React from 'react';
 
 class App extends React.Component {
   render() {
+    // const test = {id: 12, name:"Huong"}
     return (
       <>
+      {/* {JSON.stringify(test)} */}
         <h1>Vũ Minh Quân</h1>
         <MyComponent></MyComponent>
       </>
