@@ -1,76 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 
-class AddUserInfor extends React.Component {
-    state = {
-        name: '',
-        address: '',
-        age: ''
-    }
-    //JSX
-    // handleClick = (event) => {
-    //     console.log(`My name is ${this.state.name}`);
-    //     // console.log(event.target);
-    //     // console.log("My name is", this.state.name);
-    //     //Merge state chỉ có trong react class component
-    //     //Thay đổi trạng thái của state
-    //     this.setState({
-    //         name:'Phùng Quỳnh Hương',
-    //         address:'Bắc Giang',
-    //         age: Math.floor((Math.random()*100)+1)
-    //     })
-    // }
-    // handleOnMouseOver = (event) => {
-    //     // console.log(event.pageY);
-    //     console.log(">>>hover me my btn");
+const AddUserInfor = (props) => {
 
-    // }
-
-    handleOnChangeInput = (event) => {
-        this.setState({
-            name: event.target.value
-        })
+    const [name, setName] = useState('');
+    const [age, setAge] = useState('');
+    const [address] = useState('Lunatic');
+    const handleOnChangeInput = (event) => {
+        setName(event.target.value)
     }
-    handleOnChangeAge = (event) => {
-        this.setState({
-            age: event.target.value
-        })
+    const handleOnChangeAge = (event) => {
+        setAge(event.target.value)
     }
-    handleOnSubmit = (event) => {
+    const handleOnSubmit = (event) => {
         event.preventDefault();
-        // console.log(this.state);
-        this.props.handleAddNewUser({
+        props.handleAddNewUser({
             id: Math.floor((Math.random() * 100) + 1) + '-random',
-            name: this.state.name,
-            age: this.state.age
-        })
-    }
-    render() {
-        return (
-            <>My name is {this.state.name} and i'm from {this.state.address} and now {this.state.age} years old
-                {/* <button onMouseOver={this.handleOnMouseOver} >Hover me</button> */}
-                {/* <button onClick={this.handleClick} >Click me</button> */}
-                <label>Your name: </label>
-                <form onSubmit={(event) => this.handleOnSubmit(event)} >
-                    <input
-                        value={this.state.name}
-                        type="text"
-                        onChange={(event) => { this.handleOnChangeInput(event) }}
-                    />
-                </form>
-                <label>Your age: </label>
-                <form onSubmit={(event) => this.handleOnSubmit(event)} >
-                    <input
-                        value={this.state.age}
-                        type="text"
-                        onChange={(event) => { this.handleOnChangeAge(event) }}
-                    />
-                    <button>Submit</button>
-                </form>
-            </>
-        )
-    }
-
-
-}
-
+            name: name,
+            age: age
+        });
+    };
+    return (
+        <>My name is {name} and i live in {address} and now {age} years old
+            <p>Your name: </p>
+            <form onSubmit={(event) => handleOnSubmit(event)} >
+                <input
+                    value={name}
+                    type="text"
+                    onChange={(event) => { handleOnChangeInput(event) }}
+                />
+            </form>
+            <p>Your age: </p>
+            <form onSubmit={(event) => handleOnSubmit(event)} >
+                <input
+                    value={age}
+                    type="text"
+                    onChange={(event) => { handleOnChangeAge(event) }}
+                />
+                <button>Submit</button>
+            </form>
+        </>
+    )
+};
 export default AddUserInfor;

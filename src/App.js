@@ -4,19 +4,15 @@ import './App.scss';
 // import { increaseCounter, decreaseCounter } from './redux/action/counterAction';
 import MyComponent from './components/MyComponent';
 import React from 'react';
-
-class App extends React.Component {
-  render() {
-    // const test = {id: 12, name:"Huong"}
-    return (
-      <>
-      {/* {JSON.stringify(test)} */}
-        <h1>Vũ Minh Quân</h1>
-        <MyComponent></MyComponent>
-      </>
-    )
-  }
+const App = (props) => {
+  return (
+    <>
+      <h1>Vũ Minh Quân</h1>
+      <MyComponent></MyComponent>
+    </>
+  )
 }
+
 // const App = () => {
 //   const count = useSelector(state => state.counter.count);
 //   const dispatch = useDispatch();
