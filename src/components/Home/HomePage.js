@@ -4,7 +4,7 @@ const HomePage = () => {
     return (
         <div className='homepage-container' >
             <video className='video-header' autoPlay muted loop playsInline>
-                <source src={videoHomePage} type='video/mp4'/>
+                <source src={videoHomePage} type='video/mp4' />
             </video>
             <div className='homepage-content' >
                 <div className='title-content_1' >There's a better way to ask</div>
@@ -14,6 +14,6 @@ const HomePage = () => {
                 </div>
             </div>
         </div>
-    ) 
+    )
 }
 export default HomePage; 

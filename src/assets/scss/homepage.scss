@@ -1,6 +1,5 @@
-
 .homepage-container {
-    .video-header{
+    .video-header {
         position: fixed;
         width: 100%;
         bottom: 0;
@@ -11,16 +10,16 @@
         padding: 100px;
         display: flex;
         flex-direction: column;
-        gap:30px;
-        .title-content_1{
+        gap: 30px;
+        .title-content_1 {
             font-size: 45px;
             font-weight: 600;
         }
-        .title-content_2{
+        .title-content_2 {
             font-size: 25px;
         }
-        .title-content_3{
-            button{
+        .title-content_3 {
+            button {
                 border-radius: 5px;
                 height: 40px;
                 background-color: black;
